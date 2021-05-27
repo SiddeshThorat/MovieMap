@@ -6,7 +6,7 @@ const MainBody = () => {
     return(
         <div className="mainBody">
             <div className="addMovie">
-                <Link to="/addmovie">
+                <Link to="/addmovie/questionSet1">
                     <button className="addButton">Add Movie</button>
                 </Link>
             </div>
