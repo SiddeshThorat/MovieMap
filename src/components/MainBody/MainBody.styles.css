@@ -1,0 +1,16 @@
+.mainBody{
+    height: 70%;
+    padding: 20px;
+}
+.addMovie{
+    height: 10%;
+    display: flex;
+    justify-content:flex-end;
+}
+.movieList{
+    height: 80%;
+    overflow-y: scroll;
+}
+.addButton{
+    width: 200px;
+}
