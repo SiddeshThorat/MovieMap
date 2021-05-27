@@ -25,30 +25,31 @@ const Movie = () => {
     return(
         <div className="movieTableContainer">
             <table className="movieTable">
-                <tr className="headerRow">
-                    <th>Image</th>
-                    <th>Movie Name</th> 
-                    <th>Description</th>
-                    <th>Release Date</th>    
-                </tr>
-               
-                {
-                    MOVIE_DATA.map(item => {
-                        return(
-                            <tr className="contentRow">
-                                <td>
-                                   
-                                        <img src={item.image} />
-                                   
-                                </td>
-                                <td >{item.title}</td>
-                                <td>{item.description}</td>
-                                <td>{item.releaseDate}</td>
-                            </tr>
-                        );
-                    })
-                }
-               
+                <tbody>
+                    <tr className="headerRow">
+                        <th>Image</th>
+                        <th>Movie Name</th> 
+                        <th>Description</th>
+                        <th>Release Date</th>    
+                    </tr>
+                
+                    {
+                        MOVIE_DATA.map(item => {
+                            return(
+                                <tr className="contentRow" >
+                                    <td>
+                                    
+                                            <img src={item.image} />
+                                    
+                                    </td>
+                                    <td >{item.title}</td>
+                                    <td>{item.description}</td>
+                                    <td>{item.releaseDate}</td>
+                                </tr>
+                            );
+                        })
+                    }
+                </tbody>
                 
             </table>
         </div>
