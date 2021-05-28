@@ -6,7 +6,6 @@ const Movie = () => {
     const { movieData } = useContext(MovieContext);
     return(
         <div className="movieTableContainer">
-            <button >Check</button>
             <table className="movieTable">
                 <tbody>
                     <tr className="headerRow">
