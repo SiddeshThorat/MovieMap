@@ -4,12 +4,7 @@ import { Link } from 'react-router-dom';
 
 const MainBody = () => {
     return(
-        <div className="mainBody">
-            <div className="addMovie">
-                <Link to="/addmovie/questionSet1">
-                    <button className="addButton">Add Movie</button>
-                </Link>
-            </div>
+        <div className="mainBody">          
             <div className="movieList">
                 <Movie />
             </div>

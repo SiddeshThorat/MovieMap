@@ -2,12 +2,11 @@ import React,{ useContext } from 'react';
 import './Movie.styles.css'
 import MovieContext from '../../Context/MovieContext';
 
-
 const Movie = () => {
-    const movieData = useContext(MovieContext);
-    console.log(movieData)
+    const { movieData } = useContext(MovieContext);
     return(
         <div className="movieTableContainer">
+            <button >Check</button>
             <table className="movieTable">
                 <tbody>
                     <tr className="headerRow">
