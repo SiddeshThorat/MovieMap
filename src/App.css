@@ -3,3 +3,17 @@
   background-color: rgb(224, 221, 221);
   height: 100vh; 
 }
+.addButton{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 100px;
+  background-color: rgb(158, 154, 154);
+  cursor:pointer;
+}
+
+.addButton:hover{
+  height: 55px;
+  width:55px;
+  background-color: rgb(245, 238, 238);
+}

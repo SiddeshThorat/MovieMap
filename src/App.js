@@ -21,7 +21,7 @@ function App() {
             <Heading />
             <div className="addMovie">
                 <Link to="/addmovie/questionSet1">
-                    <button className="addButton">Add Movie</button>
+                    <button className="addButton">+</button>
                 </Link>
             </div>
             <Switch>
