@@ -10,13 +10,7 @@ const Movie = () => {
         <div className="movieTableContainer">
             <table className="movieTable">
                 <tbody>
-                    <tr className="headerRow">
-                        <th>Image</th>
-                        <th>Movie Name</th> 
-                        <th>Description</th>
-                        <th>Release Date</th>    
-                    </tr>
-                
+                                  
                     {
                         movieData.map(item => {
                             return(
