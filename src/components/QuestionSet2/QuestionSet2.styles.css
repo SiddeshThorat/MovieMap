@@ -19,7 +19,7 @@
     margin-top: 5px;
 }
 .inputField button{
-    width:50%;
+    width:25%;
     margin-top: 10px;
     height: 45px;
     background-color:darkgray;
@@ -30,5 +30,8 @@
     background-color:darkslategray;
     color:white;
 }
-
+.inputFieldButtons{
+    display:flex;
+    flex-direction:row;
+}
 
