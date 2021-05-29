@@ -5,7 +5,7 @@
 .movieTable{
     width: 100%;
 }
-img{
+.movieImageContainer img{
     margin: 0 35%;
     height: 100px;
 }
