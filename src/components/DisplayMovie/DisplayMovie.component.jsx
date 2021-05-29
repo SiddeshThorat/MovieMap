@@ -7,9 +7,7 @@ import {Link } from 'react-router-dom';
 const DisplayMovie = () => {
     const { movieData } = useContext(MovieContext);
     let params = useParams();
-    console.log(params)
     const movie = movieData.find(movie => movie['id'] === params.id)
-    console.log(movie)
     return(
         <div className="movieBlock">
             
