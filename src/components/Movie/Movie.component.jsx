@@ -1,9 +1,11 @@
 import React,{ useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import './Movie.styles.css'
 import MovieContext from '../../Context/MovieContext';
 
 const Movie = () => {
     const { movieData } = useContext(MovieContext);
+    const history = useHistory();
     return(
         <div className="movieTableContainer">
             <table className="movieTable">
@@ -20,9 +22,12 @@ const Movie = () => {
                             return(
                                 <tr className="contentRow" >
                                     <td>
-                                    
-                                            <img src={item.image} />
-                                    
+                                        <div onClick={() => {
+                                            
+                                            history.push(`/movie/${item.id}`)
+                                        }}>
+                                            <img src={item.image} alt=""/>
+                                        </div>
                                     </td>
                                     <td >{item.title}</td>
                                     <td>{item.description}</td>

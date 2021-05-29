@@ -1,0 +1,74 @@
+.movieBlock{
+    background-color: white;
+    height: 400px;
+    width: 50%;
+    margin: 0 25%;
+    border-radius: 20px;
+    border: solid 2px brown;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+}
+.imageBlock{
+  width:50%;
+  height: 90%;
+  border-radius:20px;
+  background-color:rgb(180, 178, 178)
+}
+.detailBlock{
+  width:50%;
+  height: 90%;
+  border-radius:20px;  
+}
+.imageContainer{
+    height: 80%;
+    margin:20px;
+    background-color:chartreuse;
+    
+}
+.imageContainer img{
+    height: 100%;
+    width:100%;
+    margin:0px;
+    border-radius: 20px;
+}
+
+.detailContainer{
+    height: 80%;
+    width: 100%;
+    margin: 10px;
+}
+.movieTitle,.movieReleaseDate,.movieCharacterName,.movieDescription{
+    width: 80%;
+    height:10%;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 10px 0;
+}
+
+.movieDescription {
+    font-size: 16px;
+    height: 100px;
+}
+
+.actorContainer{
+    display: flex;
+    width: 80%;
+    padding:10px 20px;
+}
+
+.movieActorImage img{
+    height:100px;
+    width:100px
+}
+.movieActorName{
+    font-size: 25px;
+    font-style: bold;
+}
+
+.label{
+    background-color: gray;
+    border-radius:0 20px 20px 0px;
+    padding: 2px;
+}
+

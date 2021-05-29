@@ -3,10 +3,10 @@ import './App.css';
 import Heading from './components/Heading/Heading.component';
 import MainBody from './components/MainBody/MainBody.component';
 import { Switch, Route,Link } from 'react-router-dom';
-import FirstQuestionSet from './components/FirstQuestionSet/FirstQuestionSet.component';
+import QuestionSet from './components/QuestionSet/QuestionSet.component';
 import  MovieContext  from './Context/MovieContext';
 import { MOVIE_DATA } from './Context/Data';
-
+import DisplayMovie from './components/DisplayMovie/DisplayMovie.component';
 
 function App() {
   const [movieData, updateMovie] = useState(MOVIE_DATA)
@@ -26,7 +26,8 @@ function App() {
             </div>
             <Switch>
                 <Route exact path='/' component={MainBody} />
-                <Route path='/addmovie/questionSet1' component={FirstQuestionSet} />
+                <Route path='/addmovie/questionSet1' component={QuestionSet} />
+                <Route path='/movie/:id' component={DisplayMovie} />
             </Switch>
         </MovieContext.Provider>
       </div>
