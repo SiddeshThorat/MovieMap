@@ -1,0 +1,20 @@
+.titleSection, .detailSection{
+    height: 35%;
+    display:flex;
+}
+.imageReviewContainer, .titleContainer{
+    width:50%;
+}
+.imageReviewContainer label{
+    font-weight: bold;
+}
+.imageReviewContainer{
+    display: flex;
+    flex-direction:column-reverse;
+}
+.imageReviewContainer img{
+    height: 80%;
+    width:50%;
+    margin:0 10px;
+    border-radius: 20px;
+}
