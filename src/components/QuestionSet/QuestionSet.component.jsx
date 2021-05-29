@@ -1,10 +1,12 @@
 import './QuestionSet.styles.css';
-import {Link } from 'react-router-dom';
 import React,{useState} from 'react';
 import  MovieContext  from '../../Context/MovieContext';
 import {v4 as uuid} from 'uuid';
+import  QuestionSet1 from '../QuestionSet1/QuestionSet1.component';
+import  QuestionSet2 from '../QuestionSet2/QuestionSet2.component';
+import ReviewAndSubmitForm from '../ReviewAndSubmitForm/ReviewAndSubmitForm.component';
 
-const FirstQuestionSet = ({history}) => {
+const QuestionSet = () => {
     const [title,setTitle] = useState('');
     const [image,setImage] = useState('');
     const [description,setDescription] = useState('');
@@ -12,8 +14,9 @@ const FirstQuestionSet = ({history}) => {
     const [movieCharacterName , setMovieCharacterName] = useState('');
     const [actorRealName, setActorRealName] = useState('');
     const [actorImage, setActorImage] = useState('')
+    const [currentPath,setCurrentPath] = useState('/addmovie/questionSet1')
 
-    let movie2 = {
+    let movie = {
             'image': image,
             'title': title,
             'description': description,
@@ -22,7 +25,7 @@ const FirstQuestionSet = ({history}) => {
             'actorRealName': actorRealName,
             'actorImage': actorImage,
             'id': uuid()
-        }
+    }
 
     const onTitleChange = (event) => {
         event.preventDefault();
@@ -52,56 +55,56 @@ const FirstQuestionSet = ({history}) => {
         event.preventDefault();
         setActorImage(event.target.value)
     }
+    const routeChange = (path) => {
+        setCurrentPath(path)
+    }
     return(
         <MovieContext.Consumer>
         {
             ({updateMovieData}) => {
-                return(
-                    <>
-                    <form>
-                        <label>Movie Name</label>
-                        <input 
-                        type="text" 
-                        name="title" 
-                        value={title}
-                        onChange={(event) => onTitleChange(event)} />
-                        
-                        <label>Description</label>
-                        <input type="text" name="description" value={description} 
-                         onChange={(event) => onDescriptionChange(event)}/>
+               if(currentPath === '/addmovie/questionSet1') 
+                 {
+                       return(
+                        <QuestionSet1 
+                            title={title}
+                            image={image}
+                            description={description}
+                            onTitleChange={(event)=> onTitleChange(event)}
+                            onImageChange={(event)=> onImageChange(event)}
+                            onDescriptionChange={(event)=> onDescriptionChange(event)}
+                            routeChange = {(path) => routeChange(path)}
+                        />
+                    )
+                }
+                if(currentPath === '/addmovie/questionSet2'){
+                    return(
+                        <QuestionSet2 
+                            releaseDate={releaseDate}
+                            movieCharacterName={movieCharacterName}
+                            actorRealName={actorRealName}
+                            actorImage={actorImage}
+                            onReleaseDateChange={(event)=> onReleaseDateChange(event)}
+                            onMovieCharacterNameChange={(event)=> onMovieCharacterNameChange(event)}
+                            onActorRealNameChange={(event)=> onActorRealNameChange(event)}
+                            onActorImageChange={(event)=> onActorImageChange(event)}
+                            routeChange = {(path) => routeChange(path)}
+                        />
+                    )
+                }
+                if(currentPath === '/addmovie/submit'){
+                    return(
+                        <ReviewAndSubmitForm
+                        updateMovieData={updateMovieData}
+                        movie={movie}
+                    />
+                    )
+                }
+                    
 
-                        <label>Release Date</label>
-                        <input type="text" name="releaseData" value={releaseDate} 
-                         onChange={(event) => onReleaseDateChange(event)}/>
-
-                        <label>Image</label> 
-                        <input type="text" name="image" value={image} 
-                         onChange={(event) => onImageChange(event)}/>
-
-                        <label>Movie Character Name</label> 
-                        <input type="text" name="image" value={movieCharacterName} 
-                         onChange={(event) => onMovieCharacterNameChange(event)}/>
-
-                        <label>Actor's Real Name</label> 
-                        <input type="text" name="image" value={actorRealName} 
-                         onChange={(event) => onActorRealNameChange(event)}/>
-
-                         <label>Actor's Image</label> 
-                        <input type="text" name="image" value={actorImage} 
-                         onChange={(event) => onActorImageChange(event)}/> 
-
-                        <button onClick={(event) =>{
-                                event.preventDefault();
-                                updateMovieData(movie2)
-                                history.push('/')
-                            }}>SUBMIT</button>
-                    </form>
-                    </>
-               )
-            }
         }
+    }
        </MovieContext.Consumer>
     )
 }
 
-export default FirstQuestionSet;
+export default QuestionSet;
