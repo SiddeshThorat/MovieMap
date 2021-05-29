@@ -4,33 +4,30 @@ import FormStyle from '../FormStyle/FormStyle.component';
 
 const QuestionSet1 = (props) => {
     const { title,description,image } = props;
-    const { onTitleChange,onDescriptionChange,onImageChange,routeChange } = props;
+    const { onTitleChange,onDescriptionChange,onImageChange,questionSetChange } = props;
    
     return(
         <FormStyle>
             <div className="inputField">
                 <label>Movie Name</label>
-                <input 
-                type="text" 
-                name="title" 
-                value={title}
+                <input type="text" name="title" value={title} placeholder="Movie Name"
                 onChange={event => onTitleChange(event)} />
             </div>    
             
             <div className="inputField">
             <label>Description</label>
-            <input type="text" name="description" value={description} 
+            <input type="text" name="description" value={description} placeholder="Description" 
                 onChange={event => onDescriptionChange(event)}/>
             </div>
 
             <div className="inputField">
             <label>Image</label> 
-            <input type="text" name="image" value={image} 
-                onChange={event => onImageChange(event)}/>
+            <input type="text" alt="" name="image" value={image} placeholder="Enter URL" 
+                onChange={event => {onImageChange(event)}}/>
             </div>
         
             <div className="inputField">
-                <button onClick={() => routeChange('/addmovie/questionSet2')
+                <button onClick={() => questionSetChange('questionSet2')
                     }>NEXT</button>
             </div>    
         </FormStyle>

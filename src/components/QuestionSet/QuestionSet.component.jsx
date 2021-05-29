@@ -14,7 +14,7 @@ const QuestionSet = () => {
     const [movieCharacterName , setMovieCharacterName] = useState('');
     const [actorRealName, setActorRealName] = useState('');
     const [actorImage, setActorImage] = useState('')
-    const [currentPath,setCurrentPath] = useState('/addmovie/questionSet1')
+    const [currentQuestionSet,setcurrentQuestionSet] = useState('questionSet1')
 
     let movie = {
             'image': image,
@@ -55,14 +55,14 @@ const QuestionSet = () => {
         event.preventDefault();
         setActorImage(event.target.value)
     }
-    const routeChange = (path) => {
-        setCurrentPath(path)
+    const questionSetChange = (questionSet) => {
+        setcurrentQuestionSet(questionSet)
     }
     return(
         <MovieContext.Consumer>
         {
             ({updateMovieData}) => {
-               if(currentPath === '/addmovie/questionSet1') 
+               if(currentQuestionSet === 'questionSet1') 
                  {
                        return(
                         <QuestionSet1 
@@ -72,11 +72,11 @@ const QuestionSet = () => {
                             onTitleChange={(event)=> onTitleChange(event)}
                             onImageChange={(event)=> onImageChange(event)}
                             onDescriptionChange={(event)=> onDescriptionChange(event)}
-                            routeChange = {(path) => routeChange(path)}
+                            questionSetChange = {(questionSet) => questionSetChange(questionSet)}
                         />
                     )
                 }
-                if(currentPath === '/addmovie/questionSet2'){
+                if(currentQuestionSet === 'questionSet2'){
                     return(
                         <QuestionSet2 
                             releaseDate={releaseDate}
@@ -87,11 +87,11 @@ const QuestionSet = () => {
                             onMovieCharacterNameChange={(event)=> onMovieCharacterNameChange(event)}
                             onActorRealNameChange={(event)=> onActorRealNameChange(event)}
                             onActorImageChange={(event)=> onActorImageChange(event)}
-                            routeChange = {(path) => routeChange(path)}
+                            questionSetChange = {(questionSet) => questionSetChange(questionSet)}
                         />
                     )
                 }
-                if(currentPath === '/addmovie/submit'){
+                if(currentQuestionSet === 'submit'){
                     return(
                         <ReviewAndSubmitForm
                         updateMovieData={updateMovieData}

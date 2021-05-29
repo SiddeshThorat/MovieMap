@@ -31,12 +31,15 @@ const ReviewAndSubmitForm = (props) => {
                     <label>Actor's Image</label>
                 </div>
             </div>
-            <div className="inputField">
-                <button onClick={(event) =>{
+            <div className="inputField inputFieldButtons">
+                <button className='inputFieldButton' onClick={(event) =>{
                     event.preventDefault();
                     updateMovieData(movie)
                     history.push('/')
                 }}>SUBMIT</button>
+                <button className='inputFieldButton' onClick={(event) =>{
+                    history.push('/')
+                }}>CANCEL</button>
             </div>
         </FormStyle>
     )

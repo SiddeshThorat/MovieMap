@@ -2,6 +2,7 @@ import React,{ useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import './DisplayMovie.styles.css';
 import MovieContext from '../../Context/MovieContext';
+import {Link } from 'react-router-dom';
 
 const DisplayMovie = () => {
     const { movieData } = useContext(MovieContext);
@@ -11,11 +12,14 @@ const DisplayMovie = () => {
     console.log(movie)
     return(
         <div className="movieBlock">
+            
             <div className="imageBlock">
                 <div className="imageContainer">
                     <img src={movie.image} alt=""/>
                 </div>
+                
             </div>
+           
             <div className="detailBlock">
                 <div className="detailContainer">
                     <div className="actorContainer">
@@ -40,7 +44,7 @@ const DisplayMovie = () => {
                         <label className="label">Movie Character Name:</label>
                         {movie.movieCharacterName}
                     </div>
-                    
+                    <Link to='/'><button className="goBackButton">Go Back</button></Link>
                 </div>
             </div>
         </div>
