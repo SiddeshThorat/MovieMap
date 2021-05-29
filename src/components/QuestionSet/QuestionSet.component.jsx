@@ -1,18 +1,10 @@
-import './FirstQuestionSet.styles.css';
+import './QuestionSet.styles.css';
 import {Link } from 'react-router-dom';
 import React,{useState} from 'react';
 import  MovieContext  from '../../Context/MovieContext';
+import {v4 as uuid} from 'uuid';
 
 const FirstQuestionSet = ({history}) => {
-    const movie = {
-            'image': 'www.xyz.com',
-            'title': 'Checking',
-            'description': "Trial",
-            'releaseDate': '27 May 2021',
-            'movieCharacterName': "XYZ",
-            'actorRealName': 'Vidya Balan',
-            'actorImage': 'xyz.com',
-        }
     const [title,setTitle] = useState('');
     const [image,setImage] = useState('');
     const [description,setDescription] = useState('');
@@ -29,6 +21,7 @@ const FirstQuestionSet = ({history}) => {
             'movieCharacterName': movieCharacterName,
             'actorRealName': actorRealName,
             'actorImage': actorImage,
+            'id': uuid()
         }
 
     const onTitleChange = (event) => {
