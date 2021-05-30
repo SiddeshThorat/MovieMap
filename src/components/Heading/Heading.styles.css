@@ -1,6 +1,19 @@
-.heading{
+.headerContainer{
     height: 15%;
     display: flex;
-    justify-content:center;
-
+    justify-content:space-between;
+    font-size:40px;
+    font-style: bolder;
+}
+.LogoContainer,.headerTitleContainer{
+    margin: 20px;
+}
+@media screen and (max-width:800px){
+    .LogoContainer,.headerTitleContainer{
+        margin: unset;
+    }
+    .headerTitleContainer{
+        width:60%;
+        
+    }
 }
