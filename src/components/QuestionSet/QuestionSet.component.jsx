@@ -1,10 +1,10 @@
-import './QuestionSet.styles.css';
 import React,{useState} from 'react';
-import  MovieContext  from '../../Context/MovieContext';
 import {v4 as uuid} from 'uuid';
 import  QuestionSet1 from '../QuestionSet1/QuestionSet1.component';
 import  QuestionSet2 from '../QuestionSet2/QuestionSet2.component';
-import ReviewAndSubmitForm from '../ReviewAndSubmitForm/ReviewAndSubmitForm.component';
+import  ReviewAndSubmitForm from '../ReviewAndSubmitForm/ReviewAndSubmitForm.component';
+import  MovieContext  from '../../Context/MovieContext';
+import './QuestionSet.styles.css';
 
 const QuestionSet = () => {
     const [title,setTitle] = useState('');
@@ -102,7 +102,7 @@ const QuestionSet = () => {
                     
 
         }
-    }
+        }
        </MovieContext.Consumer>
     )
 }

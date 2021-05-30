@@ -25,7 +25,6 @@
     background-color:darkgray;
     cursor:pointer;
 }
-
 .inputField button:hover{
     background-color:darkslategray;
     color:white;

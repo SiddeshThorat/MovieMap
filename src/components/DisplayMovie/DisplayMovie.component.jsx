@@ -10,7 +10,6 @@ const DisplayMovie = () => {
     const movie = movieData.find(movie => movie['id'] === params.id)
     return(
         <div className="movieBlock">
-            
             <div className="imageBlock">
                 <div className="imageContainer">
                     <img src={movie.image} alt=""/>

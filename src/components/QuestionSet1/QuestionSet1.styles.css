@@ -25,12 +25,10 @@
     background-color:darkgray;
     cursor:pointer;
 }
-
 .inputField button:hover{
     background-color:darkslategray;
     color:white;
 }
-
 @media screen and (max-width:800px){
     .inputField {
         margin: 10px 0px !important;
