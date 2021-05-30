@@ -1,8 +1,8 @@
 import React,{ useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import './Movie.styles.css'
 import MovieContext from '../../Context/MovieContext';
- 
+import './Movie.styles.css'; 
+
 const Movie = () => {
     const { movieData } = useContext(MovieContext);
     const history = useHistory();
@@ -10,7 +10,6 @@ const Movie = () => {
         <div className="movieTableContainer">
             <table className="movieTable">
                 <tbody>
-                                  
                     {
                         movieData.map(item => {
                             return(
@@ -31,7 +30,6 @@ const Movie = () => {
                         })
                     }
                 </tbody>
-                
             </table>
         </div>
     )

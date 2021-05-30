@@ -1,7 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
 import FormStyle from '../FormStyle/FormStyle.component';
-import QuestionSet from '../QuestionSet/QuestionSet.component';
 import './ReviewAndSubmitForm.styles.css';
 
 const ReviewAndSubmitForm = (props) => {

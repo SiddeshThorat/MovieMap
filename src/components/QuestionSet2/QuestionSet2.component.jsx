@@ -1,15 +1,19 @@
 import React from 'react';
-import './QuestionSet2.styles.css';
 import FormStyle from '../FormStyle/FormStyle.component';
+import './QuestionSet2.styles.css';
 
 const QuestionSet2 = (props) => {
-    const {releaseDate,movieCharacterName,actorRealName,actorImage} = props
-    const { onReleaseDateChange,
-            onMovieCharacterNameChange,
-            onActorRealNameChange,
-            onActorImageChange,
-            questionSetChange
-          } = props;
+    const {
+        releaseDate,
+        movieCharacterName,
+        actorRealName,
+        actorImage,
+        onReleaseDateChange,
+        onMovieCharacterNameChange,
+        onActorRealNameChange,
+        onActorImageChange,
+        questionSetChange
+        } = props
 
     return(
         <FormStyle>

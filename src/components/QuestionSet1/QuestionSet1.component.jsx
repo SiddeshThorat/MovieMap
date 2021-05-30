@@ -1,6 +1,6 @@
 import React from 'react';
-import './QuestionSet1.styles.css';
 import FormStyle from '../FormStyle/FormStyle.component';
+import './QuestionSet1.styles.css';
 
 const QuestionSet1 = (props) => {
     const { title,description,image } = props;
