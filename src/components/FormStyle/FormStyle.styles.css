@@ -23,3 +23,10 @@
     font-weight:bold
 }
 
+@media screen and (max-width:800px){
+    .innerContainer{
+        width:unset;
+        margin:unset;
+        border:unset;
+     }
+}
