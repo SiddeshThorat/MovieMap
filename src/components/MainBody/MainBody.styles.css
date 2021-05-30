@@ -35,5 +35,13 @@
 }
 
 @media screen and (max-width: 800px){
-    
+    .headerField span{
+        font-weight:unset;
+        font-size: unset;
+        margin: 0px;
+    }
+    .headerField{
+        width: unset;
+        margin: unset;
+    }
 }

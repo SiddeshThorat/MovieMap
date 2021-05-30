@@ -12,3 +12,13 @@ td{
     width:25%;
     justify-content: center;
 }
+
+@media screen and (max-width:800px){
+    .movieImageContainer img{
+        margin:unset;
+        height: 100px;
+    }
+    td{
+        font-size: 12px;
+    }
+}

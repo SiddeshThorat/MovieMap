@@ -78,3 +78,18 @@
 .goBackButton:hover{
     background-color:white;
 }
+
+@media screen and (max-width:800px){
+    .movieBlock{
+        width: 100%;
+        margin: unset;
+        flex-direction: column;
+        box-shadow: unset;
+    }
+    .imageBlock{
+        width:100%;
+      }
+      .detailBlock{
+        width:100%; 
+      }
+}
