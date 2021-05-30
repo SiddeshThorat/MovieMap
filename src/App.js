@@ -1,12 +1,13 @@
 import React,{useState} from 'react';
-import './App.css';
+import { Switch, Route,Link } from 'react-router-dom';
 import Heading from './components/Heading/Heading.component';
 import MainBody from './components/MainBody/MainBody.component';
-import { Switch, Route,Link } from 'react-router-dom';
 import QuestionSet from './components/QuestionSet/QuestionSet.component';
+import DisplayMovie from './components/DisplayMovie/DisplayMovie.component';
 import  MovieContext  from './Context/MovieContext';
 import { MOVIE_DATA } from './Context/Data';
-import DisplayMovie from './components/DisplayMovie/DisplayMovie.component';
+import './App.css';
+
 
 function App() {
   const [movieData, updateMovie] = useState(MOVIE_DATA)

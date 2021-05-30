@@ -1,8 +1,8 @@
 import React,{ useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import './DisplayMovie.styles.css';
-import MovieContext from '../../Context/MovieContext';
 import {Link } from 'react-router-dom';
+import MovieContext from '../../Context/MovieContext';
+import './DisplayMovie.styles.css';
 
 const DisplayMovie = () => {
     const { movieData } = useContext(MovieContext);
@@ -15,9 +15,7 @@ const DisplayMovie = () => {
                 <div className="imageContainer">
                     <img src={movie.image} alt=""/>
                 </div>
-                
             </div>
-           
             <div className="detailBlock">
                 <div className="detailContainer">
                     <div className="actorContainer">
