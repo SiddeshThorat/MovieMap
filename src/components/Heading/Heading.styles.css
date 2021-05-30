@@ -11,8 +11,10 @@
 @media screen and (max-width:800px){
     .LogoContainer,.headerTitleContainer{
         margin: unset;
+        font-size:30px;
     }
     .headerTitleContainer{
         width:60%;
+        padding:15px;
     }
 }
